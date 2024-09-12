@@ -2340,7 +2340,7 @@ BEGIN
 
   SELECT current_setting('is_superuser') = 'on' AS su INTO r;
   IF NOT r.su THEN
-    RAISE EXCEPTION 'Only supersusers can start the dynamic masking engine.';
+    -- RAISE EXCEPTION 'Only supersusers can start the dynamic masking engine.';
   END IF;
 
   -- Load faking data
@@ -2386,7 +2386,7 @@ BEGIN
 
   SELECT current_setting('is_superuser') = 'on' AS su INTO r;
   IF NOT r.su THEN
-    RAISE EXCEPTION 'Only supersusers can stop the dynamic masking engine.';
+    -- RAISE EXCEPTION 'Only supersusers can stop the dynamic masking engine.';
   END IF;
 
   -- Walk through all tables in the source schema and drop the masking view
